@@ -22,7 +22,7 @@ class _OnboardPage2State extends State<OnboardPage2> {
   int bg = 10;
 
   String title =
-      '“Ancient Greece” takes\nplayers to an ancient\ncivilization filled with gods\nand ancient magical artifacts.';
+      '“Mysctic World” takes\nplayers to an ancient\ncivilization filled with gods\nand ancient magical artifacts.';
 
   void onTap() {
     index++;
@@ -77,7 +77,9 @@ class _OnboardPage2State extends State<OnboardPage2> {
               children: [
                 SizedBox(height: 70 + getStatusBar(context)),
                 if (index == 1 || index == 3) ...[
-                  _ImageCard(index: index),
+                  const SizedBox(
+                    height: 300,
+                  ),
                   const Spacer(),
                 ],
                 const SizedBox(height: 44),
@@ -228,11 +230,11 @@ class _ImageCard extends StatelessWidget {
           ],
         ),
         boxShadow: [
-          BoxShadow(
-            color: const Color(0xffDD6AFF).withOpacity(0.5),
-            blurRadius: 10,
-            spreadRadius: 3,
-          ),
+          // BoxShadow(
+          //   color: const Color(0xffDD6AFF).withOpacity(0.5),
+          //   blurRadius: 10,
+          //   spreadRadius: 3,
+          // ),
         ],
       ),
       child: Center(
@@ -242,19 +244,19 @@ class _ImageCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(17),
             child: Stack(
               children: [
-                Positioned(
-                  top: 0,
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  child: Transform.scale(
-                    scaleX: index == 3 ? -1 : 1,
-                    child: Image.asset(
-                      'assets/bg3.png',
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
+                // Positioned(
+                //   top: 0,
+                //   bottom: 0,
+                //   left: 0,
+                //   right: 0,
+                //   child: Transform.scale(
+                //     scaleX: index == 3 ? -1 : 1,
+                //     child: Image.asset(
+                //       'assets/bg3.png',
+                //       fit: BoxFit.cover,
+                //     ),
+                //   ),
+                // ),
               ],
             ),
           ),

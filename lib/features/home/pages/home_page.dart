@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
       ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
     ),
     Pages(
-      'Ancient Greece',
+      'Mysctic World',
       Assets.assetsGm2,
       const Color(0xFF63EF6C),
       3,
@@ -172,7 +172,12 @@ class _HomePageState extends State<HomePage> {
                             pages[index].title,
                             color: getTitleColor(index),
                           ),
-                          Expanded(child: Image.asset(pages[index].image)),
+                          Expanded(
+                              child: Image.asset(
+                                  height:
+                                      MediaQuery.of(context).size.height * .3,
+                                  width: MediaQuery.of(context).size.width * .6,
+                                  pages[index].image)),
                         ],
                       );
                     },
