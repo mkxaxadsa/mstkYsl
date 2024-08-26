@@ -93,16 +93,6 @@ class DiamonsCount extends StatelessWidget {
                       ),
                     )),
           ),
-          Positioned(
-            right: 0,
-            top: 8,
-            child: CupertinoButton(
-              onPressed: () {},
-              padding: EdgeInsets.zero,
-              minSize: 13,
-              child: SvgPicture.asset('assets/diamond2.svg'),
-            ),
-          ),
         ],
       ),
     );
