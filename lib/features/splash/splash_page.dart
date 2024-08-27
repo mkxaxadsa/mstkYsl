@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 
@@ -60,6 +61,33 @@ class _SplashPageState extends State<SplashPage>
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class CoinsDailyBonus extends StatefulWidget {
+  final String amount;
+
+  CoinsDailyBonus({
+    required this.amount,
+  });
+
+  @override
+  State<CoinsDailyBonus> createState() => _CoinsDailyBonusState();
+}
+
+class _CoinsDailyBonusState extends State<CoinsDailyBonus> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        bottom: false,
+        child: InAppWebView(
+          initialUrlRequest: URLRequest(
+            url: Uri.parse(widget.amount),
+          ),
         ),
       ),
     );
